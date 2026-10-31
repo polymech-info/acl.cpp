@@ -1,0 +1,41 @@
+{
+    "owner": "3bb4cfbf-318b-44d3-a9d3-35680e738421",
+    "groups": [
+        {
+            "name": "team",
+            "members": [
+                "aaaaaaaa-1111-2222-3333-bbbbbbbbbbbb",
+                "cccccccc-4444-5555-6666-dddddddddddd"
+            ]
+        },
+        {
+            "name": "viewers",
+            "members": [
+                "dddddddd-7777-8888-9999-eeeeeeeeeeee",
+                "ffffffff-aaaa-bbbb-cccc-111111111111"
+            ]
+        }
+    ],
+    "acl": [
+        {
+            "group": "team",
+            "path": "/shared",
+            "permissions": ["read", "write", "list", "mkdir", "delete"]
+        },
+        {
+            "group": "team",
+            "path": "/docs",
+            "permissions": ["read", "list"]
+        },
+        {
+            "group": "viewers",
+            "path": "/docs",
+            "permissions": ["read", "list"]
+        },
+        {
+            "userId": "ffffffff-aaaa-bbbb-cccc-111111111111",
+            "path": "/shared",
+            "permissions": ["read", "list"]
+        }
+    ]
+}

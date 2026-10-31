@@ -1,0 +1,19 @@
+{
+  "name": "@polymech/pm-acl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone RBAC and vfs-settings loader. Consumed by vfs.cpp and Tanit; not linked into them by default.",
+  "scripts": {
+    "configure": "node ../../scripts/cmake.mjs --preset dev",
+    "configure:release": "node ../../scripts/cmake.mjs --preset release",
+    "build:cpp": "npm run configure && node ../../scripts/cmake.mjs --build --preset dev --target pm-acl",
+    "build:cpp-fast": "node ../../scripts/cmake.mjs --build --preset dev --target pm-acl",
+    "build:cpp:release": "npm run configure:release && node ../../scripts/cmake.mjs --build --preset release --target pm-acl",
+    "test": "node tests/run.mjs",
+    "test:core": "node tests/test-core.mjs",
+    "test:vfs": "node tests/test-vfs.mjs",
+    "test:file": "node tests/test-file.mjs",
+    "test:build": "npm run build:cpp && npm test"
+  }
+}
